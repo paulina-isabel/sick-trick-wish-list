@@ -3,7 +3,7 @@ import './TrickCard.css';
 function TrickCard({ stance, name, obstacle, tutorial }) {
 
   return (
-    <div className='tick-card'>
+    <div className='trick-card'>
       <h2 className='trick-type'>
         {stance} {name}
       </h2>
