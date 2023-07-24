@@ -19,9 +19,9 @@ function Tricks({ skateData }) {
   })
   
   return (
-    <>
+    <div className='trick-cards-container'>
       {trickCards}
-    </>
+    </div>
   )
 }
 

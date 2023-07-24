@@ -1,12 +1,14 @@
 import './TrickCard.css';
 
-function TrickCard() {
+function TrickCard({ stance, name, obstacle, tutorial }) {
 
   return (
-    <div>
-      <h1 className='trick-type'>
-        Tricks!
-      </h1>
+    <div className='tick-card'>
+      <h2 className='trick-type'>
+        {stance} {name}
+      </h2>
+      <p>Obstacle: {obstacle}</p>
+      <p>Tutorial: {tutorial}</p>
     </div>
   );
 }
