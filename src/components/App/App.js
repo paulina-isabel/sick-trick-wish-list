@@ -17,10 +17,14 @@ function App() {
         )
   }, [])
 
+  function addTrick(newTrick) {
+    setSkateData([...skateData, newTrick])
+  }
+
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>
-      <Form />
+      <Form addTrick={addTrick}/>
       <Tricks skateData={skateData}/>
     </div>
   );
