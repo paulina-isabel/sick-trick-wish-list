@@ -29,8 +29,8 @@ function Form({ addTrick }) {
 
   return (
     <div className='form-container'>
-      <form>
-        <label>        
+      <form className='trick-submission'>
+        <label className='stance-selector'>        
           Stance:
           <select value={stance} onChange={event => setStance(event.target.value)}>
             <option>Regular</option>
@@ -38,7 +38,7 @@ function Form({ addTrick }) {
           </select>
         </label> 
 
-        <input 
+        <input className='trick-name-input'
           type='text'
           placeholder='Name of Trick'
           name='trick'
@@ -46,7 +46,7 @@ function Form({ addTrick }) {
           onChange={event => setName(event.target.value)}
           />
 
-        <label>        
+        <label className='obstacle-selector'>        
           Obstacle:
           <select value={obstacle} onChange={event => setObstacle(event.target.value)}>
             <option>Flatground</option>
@@ -57,7 +57,7 @@ function Form({ addTrick }) {
           </select>
         </label> 
 
-        <input 
+        <input className='tutorial-link-input'
           type='text'
           placeholder='Link to Tutorial'
           name='tutorial'

@@ -7,9 +7,15 @@ describe('homepage user flow', () => {
     .visit('http://localhost:3000')
   })
 
-  it('should display title, form, and existing cards', () => {
+  it('should display title, form elements, and existing cards', () => {
     cy.contains('h1', 'Sick Trick Wish List')
     cy.get('.form-container')
-      .contains('form > :nth-child(1)')
+    cy.get('.trick-submission')
+    cy.get('.trick-name-input')
+    cy.get('.obstacle-selector')
+    cy.get('.tutorial-link-input')
+    cy.get('button')
+    cy.get('.trick-cards-container').children()
+      .should('have.length', 3)
   })
 })
