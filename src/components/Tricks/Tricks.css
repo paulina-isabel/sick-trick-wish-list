@@ -1,3 +1,4 @@
 .trick-cards-container {
   display: flex;
+  flex-wrap: wrap;
 }
