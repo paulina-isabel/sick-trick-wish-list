@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import Tricks from '../Tricks/Tricks';
-import TrickCard from '../TrickCard/TrickCard';
+import Form from '../Form/Form';
 import getData from '../.././apiCalls/apiCalls';
 import { useEffect, useState } from 'react';
 
@@ -20,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>
+      <Form />
       <Tricks skateData={skateData}/>
     </div>
   );
