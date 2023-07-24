@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 function Form({ addTrick }) {
   const [stance, setStance] = useState('')
-  // const [trick, setTrick] = useState('')
   const [name, setName] = useState('')
   const [obstacle, setObstacle] = useState('')
   const [tutorial, setTutorial] = useState('')
@@ -18,12 +17,18 @@ function Form({ addTrick }) {
       tutorial
     }
     addTrick(newTrick)
+    clearInput()
+  }
+
+  function clearInput() {
+    setStance('')
+    setName('')
+    setObstacle('')
+    setTutorial('')
   }
 
   return (
     <form>
-
-      {/* stance:  'Regular' and 'Switch'*/}
       <label>        
         Stance:
         <select value={stance} onChange={event => setStance(event.target.value)}>
@@ -40,7 +45,6 @@ function Form({ addTrick }) {
         onChange={event => setName(event.target.value)}
       />
 
-      {/* obstacle :  'Flatground', 'Ledge', 'Rail', 'Stairs', and 'Pool'*/}
       <label>        
         Obstacle:
         <select value={obstacle} onChange={event => setObstacle(event.target.value)}>
@@ -63,7 +67,6 @@ function Form({ addTrick }) {
       <button onClick={event => submitTrick(event)}>Send it!</button>
     </form>
   )
-
 }
 
 export default Form
