@@ -1,11 +1,11 @@
 import './TrickCard.css';
 
-function TrickCard( skateData ) {
-  console.log(skateData, 'skate stuff')
+function TrickCard() {
+
   return (
     <div>
       <h1 className='trick-type'>
-        Trick: {skateData.stance}
+        Tricks!
       </h1>
     </div>
   );
